@@ -32,6 +32,7 @@ ALLOWED_HOSTS = []
 # Important Information Slayck add the new apps in here
 
 INSTALLED_APPS = [
+    'blog.apps.BlogConfig',
     'jobs.apps.JobsConfig',
     'django.contrib.admin',
     'django.contrib.auth',
