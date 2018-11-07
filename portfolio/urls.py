@@ -17,7 +17,16 @@ from django.contrib import admin
 from django.urls import path
 from django.conf import settings
 from django.conf.urls.static import static
+from . import views as homeViews
+from jobs import views as jobViews
+from blog import views as blogViews
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path("",homeViews.home, name="hello"),
+    path("about/",homeViews.about, name="about"),
+    path("home/",homeViews.home, name="home"),
+    path("jobs/",jobViews.home,name="jobViews"),
+    path("blog/",blogViews.home, name="blogViews"),
+
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
