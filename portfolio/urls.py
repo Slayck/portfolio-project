@@ -23,7 +23,7 @@ from blog import views as blogViews
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path("",homeViews.home, name="hello"),
+    path("",jobViews.home, name="hello"),
     path("about/",homeViews.about, name="about"),
     path("home/",homeViews.home, name="home"),
     path("jobs/",jobViews.home,name="jobViews"),
