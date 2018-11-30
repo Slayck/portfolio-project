@@ -9,6 +9,10 @@ class Blog(models.Model):
     pubDate = models.DateTimeField(default=datetime.now())
     enabled = models.BooleanField()
 
+    def __str__(self):
+        return self.blogTitle
+
+
     def summary(self):
         blogSummary = self.blogNote[:100] + "..."
         return blogSummary

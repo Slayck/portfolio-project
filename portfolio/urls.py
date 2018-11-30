@@ -28,5 +28,6 @@ urlpatterns = [
     path("home/",homeViews.home, name="home"),
     path("jobs/",jobViews.home,name="jobViews"),
     path("blog/",blogViews.home, name="blogViews"),
+    path("blog/<int:blogID>",blogViews.blogDetail,name="blogDetail")
 
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
